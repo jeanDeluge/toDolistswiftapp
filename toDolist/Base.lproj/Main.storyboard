@@ -1,7 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="17701" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="17701" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="cCp-4M-7Ij">
     <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
+        <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="17703"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="System colors in document resources" minToolsVersion="11.0"/>
@@ -79,38 +80,67 @@
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
-                            <datePicker contentMode="scaleToFill" ambiguous="YES" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" datePickerMode="dateAndTime" minuteInterval="1" translatesAutoresizingMaskIntoConstraints="NO" id="sgi-cU-rgB">
-                                <rect key="frame" x="0.0" y="156" width="414" height="621"/>
+                            <datePicker contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" datePickerMode="dateAndTime" minuteInterval="1" translatesAutoresizingMaskIntoConstraints="NO" id="Ayo-ql-xf3">
+                                <rect key="frame" x="55" y="170" width="305" height="222"/>
+                                <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxY="YES"/>
                             </datePicker>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="CmU-EE-ce7"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
-                            <constraint firstItem="sgi-cU-rgB" firstAttribute="top" secondItem="b7t-Su-u9s" secondAttribute="bottom" constant="50" id="8oL-ah-zN4"/>
                             <constraint firstItem="b7t-Su-u9s" firstAttribute="leading" secondItem="CmU-EE-ce7" secondAttribute="leading" constant="20" id="eg9-x1-Mj8"/>
                             <constraint firstItem="b7t-Su-u9s" firstAttribute="top" secondItem="CmU-EE-ce7" secondAttribute="top" constant="10" id="qyF-f3-OKe"/>
                             <constraint firstItem="CmU-EE-ce7" firstAttribute="trailing" secondItem="b7t-Su-u9s" secondAttribute="trailing" constant="20" id="uox-sF-2RO"/>
                         </constraints>
                     </view>
                     <connections>
-                        <outlet property="datePicker" destination="sgi-cU-rgB" id="Stp-L9-nRo"/>
-                        <outlet property="textField" destination="b7t-Su-u9s" id="TbZ-to-K3J"/>
+                        <outlet property="datePicker" destination="Ayo-ql-xf3" id="ZDV-GH-bo5"/>
+                        <outlet property="textField" destination="b7t-Su-u9s" id="YEd-pS-HhF"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Da6-s8-ph2" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="2637.68115942029" y="93.75"/>
         </scene>
-        <!--View Controller-->
+        <!--View View Controller-->
         <scene sceneID="XdS-pO-0QX">
             <objects>
-                <viewController id="jq4-lw-QQB" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="view" id="jq4-lw-QQB" customClass="ViewViewController" customModule="toDolist" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="hXr-dI-UWE">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="aX2-kK-exi">
+                                <rect key="frame" x="20" y="64" width="374" height="70"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="70" id="HON-g6-mwL"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="CfR-hq-7LI">
+                                <rect key="frame" x="20" y="142" width="374" height="70"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="70" id="Rmp-fy-DSw"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
                         <viewLayoutGuide key="safeArea" id="bdS-KH-4EZ"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="aX2-kK-exi" firstAttribute="leading" secondItem="bdS-KH-4EZ" secondAttribute="leading" constant="20" id="0BR-0t-mic"/>
+                            <constraint firstItem="bdS-KH-4EZ" firstAttribute="trailing" secondItem="aX2-kK-exi" secondAttribute="trailing" constant="20" id="JLh-fa-UYz"/>
+                            <constraint firstItem="aX2-kK-exi" firstAttribute="top" secondItem="bdS-KH-4EZ" secondAttribute="top" constant="20" id="WtG-Nk-aLr"/>
+                        </constraints>
                     </view>
+                    <connections>
+                        <outlet property="dateLabel" destination="CfR-hq-7LI" id="ay5-oF-upJ"/>
+                        <outlet property="itemLabel" destination="aX2-kK-exi" id="BwL-Hc-RzF"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="gqN-mh-k66" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
